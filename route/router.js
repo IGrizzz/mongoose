@@ -15,7 +15,7 @@ const router = express.Router()
 router.post('/participant', ParticipantsController.createNewPar)
 router.get('/participant', ParticipantsController.getPar)
 router.get('/participant/:id', ParticipantsController.getParById)
-router.put('/participants/:id', ParticipantsController.updatePar)
+router.patch('/participants/:id', ParticipantsController.updatePar)
 router.delete('/particpants/:id', ParticipantsController.deletePar)
 
 //Instructor
@@ -23,7 +23,7 @@ router.delete('/particpants/:id', ParticipantsController.deletePar)
 router.post('/instructor', InstructorController.createNewIns)
 router.get('/instructor', InstructorController.getIns)
 router.get('/instructor/:id', InstructorController.getInsById)
-router.put('/instructor/:id', InstructorController.updateIns)
+router.patch('/instructor/:id', InstructorController.updateIns)
 router.delete('/instructor/:id', InstructorController.deleteIns)
 
 //Courses
@@ -32,7 +32,7 @@ router.get('/', CoursesController.helloWorld)
 router.post('/courses', CoursesController.createNewCour)
 router.get('/courses', CoursesController.getCour)
 router.get('/courses/:id', CoursesController.getCourById)
-router.put('/courses/:id', CoursesController.updateCour)
+router.patch('/courses/:id', CoursesController.updateCour)
 router.delete('/courses/:id', CoursesController.deleteCour)
 
 
