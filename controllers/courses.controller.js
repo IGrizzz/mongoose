@@ -2,6 +2,13 @@ const CoursesModels = require("../models/courses");
 
 class CoursesController {
 
+    
+
+            static async helloWorld(req, res){
+                res.send("hello world")
+            }
+
+
             static async createNewCour(req, res){
 
 

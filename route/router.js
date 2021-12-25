@@ -7,6 +7,9 @@ const CoursesController = require("../controllers/courses.controller")
 
 const router = express.Router()  
 
+
+
+
 //Participants
 
 router.post('/participant', ParticipantsController.createNewPar)
@@ -25,6 +28,7 @@ router.delete('/instructor/:id', InstructorController.deleteIns)
 
 //Courses
 
+router.get('/', CoursesController.helloWorld)
 router.post('/courses', CoursesController.createNewCour)
 router.get('/courses', CoursesController.getCour)
 router.get('/courses/:id', CoursesController.getCourById)
