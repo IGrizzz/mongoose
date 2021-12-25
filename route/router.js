@@ -16,7 +16,7 @@ router.post('/participant', ParticipantsController.createNewPar)
 router.get('/participant', ParticipantsController.getPar)
 router.get('/participant/:id', ParticipantsController.getParById)
 router.patch('/participant/:id', ParticipantsController.updatePar)
-router.delete('/particpant/:id', ParticipantsController.deletePar)
+router.delete('/participant/:id', ParticipantsController.deletePar)
 
 //Instructor
 
