@@ -55,7 +55,7 @@ class InstructorController {
                     const dateOfBirth = body.dateOfBirth
                     const location = body.location
 
-                    await InstructorsModels.updateOne({_id:id, name:name, dateOfBirth:dateOfBirth, location:location});
+                    await InstructorsModels.updateOne({_id:id}, {name:name}, {dateOfBirth:dateOfBirth}, {location:location});
                     res.status(200).send({message: "Success"})
                 }catch(error){
                     res.status(500).send({err: error})
