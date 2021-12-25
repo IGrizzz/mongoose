@@ -35,7 +35,7 @@ class CoursesController {
 
             static async getCour(req, res){
                 try{
-                    const CourList = await CoursesModels.find().populate("instructor")
+                    const CourList = await CoursesModels.find().populate("instructor").exec();
                     res.status(200).send(CourList)
                 }catch(error){
                     res.status(500).send({err:error})
@@ -48,7 +48,7 @@ class CoursesController {
                     const id = req.params.id
 
 
-                    const CourList = await CoursesModels.findOne({_id:id}).populate("instructor");
+                    const CourList = await CoursesModels.findOne({_id:id}).populate("instructor").exec();
                     res.status(200).send(CourList);
                 }catch(error){
                     res.status(500).send({err: error})
