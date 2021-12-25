@@ -15,8 +15,8 @@ const router = express.Router()
 router.post('/participant', ParticipantsController.createNewPar)
 router.get('/participant', ParticipantsController.getPar)
 router.get('/participant/:id', ParticipantsController.getParById)
-router.patch('/participants/:id', ParticipantsController.updatePar)
-router.delete('/particpants/:id', ParticipantsController.deletePar)
+router.patch('/participant/:id', ParticipantsController.updatePar)
+router.delete('/particpant/:id', ParticipantsController.deletePar)
 
 //Instructor
 
