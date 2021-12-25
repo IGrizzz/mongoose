@@ -67,7 +67,7 @@ class CoursesController {
                     const instructor = body.instructor
                     const scheduledDateTime = body.scheduledDateTime
 
-                    await CoursesModels.updateOne({_id:id, title:title, decription:description, instructor:instructor, scheduledDateTime:scheduledDateTime});
+                    await CoursesModels.updateOne({_id:id}, {title:title, decription:description, instructor:instructor, scheduledDateTime:scheduledDateTime});
                     res.status(200).send({message: "Success"})
                 }catch(error){
                     res.status(500).send({err: error})
