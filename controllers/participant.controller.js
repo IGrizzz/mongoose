@@ -53,7 +53,14 @@ class ParticipantsController {
                 try{
                     const id = req.params.id
 
-                    await ParticipantsModels.updateOne({_id:id});
+                    const body = req.body;
+                    const name = body.name;
+                    const dateOfBirth = body.dateOfBirth;
+                    const email = body.email;
+                    const phone = body.phone;
+                    const courses = body.courses;
+
+                    await ParticipantsModels.updateOne({_id:id, name:name, dateOfBirth:dateOfBirth, email:email, phone:phone, courses:courses});
                     res.status(200).send({message: "Success"})
                 }catch(error){
                     res.status(500).send({err: error})

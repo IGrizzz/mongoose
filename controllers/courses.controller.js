@@ -60,8 +60,14 @@ class CoursesController {
                 try{
                     const id = req.params.id
                     
+                    const body = req.body
 
-                    await CoursesModels.updateOne({_id:id});
+                    const title = body.title
+                    const description = body.description
+                    const instructor = body.instructor
+                    const scheduledDateTime = body.scheduledDateTime
+
+                    await CoursesModels.updateOne({_id:id, title:title, decription:description, instructor:instructor, scheduledDateTime:scheduledDateTime});
                     res.status(200).send({message: "Success"})
                 }catch(error){
                     res.status(500).send({err: error})
