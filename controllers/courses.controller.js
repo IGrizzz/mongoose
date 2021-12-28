@@ -6,7 +6,7 @@ class CoursesController {
 
             static async helloWorld(req, res){
                 res.json({
-                    message:" you can see the documentation on https://documenter.getpostman.com/view/18756228/UVREj4T9"
+                    message:" you can see the documentation on Github Repo"
                 })
             }
 
